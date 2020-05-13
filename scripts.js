@@ -27,6 +27,7 @@ function guess() {
                     if (bestPlay > (5 - guessRemaining)) {
                         bestPlay = 5 - guessRemaining;
                         console.log(bestPlay);
+                        document.getElementById("guessRecord").innerHTML = `Best score: ${bestPlay}`;
                     }
 
                     // luu het vao history
@@ -40,22 +41,19 @@ function guess() {
                 } else if (randomNum < value) {
                     alert("Too big. Not even close");
                 }
-                time = 30;
             }
         } else {
             alert("Better luck next time !");
             document.getElementById("btnGuess").disable = true;
         }
     }
-
-    // document.getElementById("historyArea").innerHTML = `History: ${history}`;
+    document.getElementById("historyArea").innerHTML = `History: ${history}`;
     if (guessRemaining > 0) {
         document.getElementById("guessRemainingArea").innerHTML = `Turn left: ${guessRemaining}`;
     } else {
         document.getElementById("guessRemainingArea").innerHTML = `Better luck next time`;
     }
 }
-
 
 function resetAll() {
     timeOut();
@@ -68,16 +66,16 @@ function resetAll() {
 
 function timecounting() {
     myTime = setInterval(() => {
-            time -= 1
-            const percent = time / 30 * 100;
-            document.getElementById("progress-bar").setAttribute("style", "width:" + percent + "%");
-            document.getElementById("progress-bar").setAttribute("aria-valuenow", percent);
-            document.getElementById("guessTimeCount").innerHTML = `Time left: ${time}`;
-            if (time == 0) {
-                timeOut(); // Put the function timeOut to stop counting
-                document.getElementById("guessTimeCount").innerHTML = `Sorry bae. You ran out of time`;
-            }
-        }, 1000) // every 1 second, it will add 1 into time variable (computer use millisecond so 1000 is 1 second)
+        time -= 1
+        const percent = time / 30 * 100;
+        document.getElementById("progress-bar").setAttribute("style", "width:" + percent + "%");
+        document.getElementById("progress-bar").setAttribute("aria-valuenow", percent);
+        document.getElementById("guessTimeCount").innerHTML = `Time left: ${time}`;
+        if (time == 0) {
+            timeOut();
+            document.getElementById("guessTimeCount").innerHTML = `Sorry bae. You ran out of time`;
+        }
+    }, 1000)
 }
 
 function timeOut() {

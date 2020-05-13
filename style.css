@@ -1,12 +1,7 @@
-nav h1 {
-    float: right;
-    align-items: center;
-}
-
 .play-game-button {
-    font-size: 30px;
+    font-size: 40px;
     border-radius: 10px;
-    height: 60px;
+    height: auto;
     width: 40%;
     background-color: darkgreen;
     color: yellow;
@@ -75,10 +70,58 @@ nav h1 {
 }
 
 .input-box {
-    border-radius: 20px;
     display: flex;
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
-    height: 80px;
+}
+
+.input-box-style {
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 84px;
+    width: 30%;
+    font-size: 40px;
+}
+
+.button-box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.button-box-guess {
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: darkred;
+    color: white;
+    font-weight: 400;
+    height: 40px;
+    width: 10%;
+}
+
+.button-box-reset {
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #03256c;
+    color: white;
+    font-weight: 400;
+    height: 40px;
+    width: 15%;
+}
+
+.progress {
+    height: auto;
+    border-radius: 10px;
+}
+
+.time-left-text {
+    font-size: 20px;
+}
+
+.turn-left-text {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

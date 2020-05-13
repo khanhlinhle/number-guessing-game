@@ -10,34 +10,33 @@
 </head>
 
 <body>
-    <nav>
-        <img src="img/logo.png" />
-        <h1 class="text-center">WELCOME TO LIN LIN WORLD</h1>
-    </nav>
     <section>
         <h1 class="text-animation text-center">NUMBER GUESSING GAME</h1>
         <div class="container">
             <div class="play-game-box">
                 <button class="play-game-button" onclick="startGame()">Play game</button>
             </div>
-            <h2> Guess a mystery number from <strong>1</strong> to <strong>100</strong> </h2>
-            <div id="resultArea"> Show Result</div>
-            <input type="number" id="guessNumber" class="input-box" />
-            <div>
-                <button onclick="guess()">Guess</button>
-                <button onclick="resetAll()">Start Again</button>
+            <div class="text-center">
+                <span> Guess a mystery number from <strong>1</strong> to <strong>100</strong> within <strong>30 seconds</strong>
+                </span>
             </div>
-            <div>
+            <div class="input-box">
+                <input type="number" id="guessNumber" class="input-box-style" />
+            </div>
+            <div class="button-box">
+                <button class="button-box-guess" onclick="guess()">Guess</button>
+                <button class="button-box-reset" onclick="resetAll()">Start Again</button>
+            </div>
+            <div class="text-center turn-left-text">
                 <span id="guessRemainingArea"></span>
             </div>
-
             <div class="progress">
                 <div id="progress-bar" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:100%">
                 </div>
+                <div id="guessTimeCount" class="time-left-text"></div>
             </div>
-
-            <div id="guessTimeCount"></div>
-            <div id="historyArea">Show the history</div>
+            <div class="text-center turn-left-text" id="historyArea"></div>
+            <div class="text-center turn-left-text" id="guessRecord"></div>
         </div>
         <script src="scripts.js "></script>
     </section>
