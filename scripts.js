@@ -1,5 +1,4 @@
-// let randomNum = Math.round(Math.random() * 100);
-let randomNum = 50;
+let randomNum = Math.round(Math.random() * 100);
 let history = [];
 let resultHistory = [];
 let guessRemaining = 5;
@@ -58,6 +57,7 @@ function guess() {
 function resetAll() {
     timeOut();
     guessRemaining = 5;
+    randomNum = Math.round(Math.random() * 100);
     history = [];
     document.getElementById("guessRemainingArea").innerHTML = `Turn left: ${guessRemaining}`;
     time = 30;
